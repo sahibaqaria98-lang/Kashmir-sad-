@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ek Phool - Kashmir</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Playfair+Display&display=swap" rel="stylesheet">
+<style>
+body{margin:0; background:#080e0b; font-family:'Noto Nastaliq Urdu'; text-align:center; overflow-x:hidden; color:white}
+.main{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1000'); background-size:cover; background-attachment:fixed}
+.box{background:#fffffe; color:#222; max-width:650px; border-radius:24px; padding:30px 22px; box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.emoji-row{font-size:22px; letter-spacing:5px}
+h1{font-family:'Playfair Display'; font-size:26px; margin:15px 0 5px 0}
+.heading{font-size:22px; color:#6d1a1a; font-weight:bold; line-height:1.8; margin:20px 0}
+.story{font-size:18px; line-height:2.2; background:#fdf6f6; border-radius:14px; padding:15px; border-right:4px solid #8b0000}
+.dua-box{margin-top:20px; background:#f0f7f0; border-radius:14px; padding:15px; border-right:4px solid #1b5e20}
+.dua-box h3{margin:0 0 8px 0; color:#1b5e20; font-family:'Playfair Display'; font-size:16px}
+.dua-text{font-size:17px; line-height:2.1; color:#333}
+.appeal{margin-top:20px; background:#1a1a1a; color:white; border-radius:14px; padding:18px; font-size:16px; line-height:2}
+.appeal b{color:#ffcdd2}
+.petal{position:fixed; top:-20px; animation:fall linear infinite; z-index:100; pointer-events:none}
+@keyframes fall{0%{transform:translateY(-30px) rotate(0deg); opacity:0.9} 100%{transform:translateY(110vh) rotate(360deg); opacity:0}}
+</style>
+</head>
+<body>
+
+<div class="main">
+  <div class="box">
+    <div class="emoji-row">😢 🍁 💔 🥀 🤍</div>
+    <h1>إِنَّا لِلَّٰهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ</h1>
+    <p style="font-size:12px; color:#999; letter-spacing:2px; font-family:'Playfair Display'">WE BELONG TO ALLAH</p>
+
+    <div class="heading">
+      Kashmir me hospital na hone ki waja se<br>
+      Ek chota sa phool Allah ko pyara ho gaya 😢🥀
+    </div>
+
+    <div class="story">
+      Na waqt par dawa mili 😔<br>
+      Na doctor ka sahara mila 💔<br>
+      Chinar ke saye me so gaya wo masoom<br>
+      Jo ab Jannat me muskura raha hoga 🤍🕊️
+    </div>
+
+    <div class="dua-box">
+      <h3>🤲 Sabr Ki Dua 🤲</h3>
+      <div class="dua-text">
+        Ya Allah is nanni si jaan ko Jannat ka phool bana de 😢<br>
+        Ya Allah is ke Maa Baap ko Sabr-e-Jameel ata farma 🤲<br>
+        Ya Allah un ke dil ke zakham par apni rehmat ka marham laga de 💔<br>
+        Ye gham sehna asan nahi, tu hi sabr dene wala hai
+      </div>
+    </div>
+
+    <div class="appeal">
+      <b>📢 Hukumat-e-Waqt Se Apeal 📢</b><br><br>
+      🙏 Khudara Kashmir me hospital banaya jaye 😢<br>
+      🙏 Hamare bache dawa ke bina mar rahe hain 💔<br>
+      🙏 Ek hospital hota to aaj ye phool zinda hota 🥀<br><br>
+      <span style="font-size:13px; color:#ccc">Ye sirf ek bachi nahi, ye pure Kashmir ka dard hai 😢🍁</span>
+    </div>
+
+    <p style="margin-top:18px; font-size:11px; color:#aaa">🍁 Allah Hafiz, Nanna Phool 🍁</p>
+  </div>
+</div>
+
+<script>
+setInterval(()=>{
+  const e=document.createElement('div');
+  e.className='petal';
+  const emojis=['😢','💔','🥀','🍁','🤍','😔'];
+  e.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+  e.style.left=Math.random()*100+'vw';
+  e.style.animationDuration=(3+Math.random()*5)+'s';
+  e.style.fontSize=(16+Math.random()*16)+'px';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),8000);
+},300);
+</script>
+
+</body>
+</html>
